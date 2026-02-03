@@ -265,7 +265,6 @@
         <div class="quote-wrapper" id="quoteWrapper">
             <div class="quote-mark">"</div>
             <p class="quote-text" id="quoteText">載入中...</p>
-            
             <div class="quote-meta">
                 <p class="quote-book" id="quoteBook">書名</p>
                 <p class="quote-author" id="quoteAuthor">作者</p>
@@ -289,28 +288,61 @@
     </div>
     
     <script>
-        // Quotes 資料（加權重系統）
+        // Quotes 資料（加 ID 供識別）
         const quotes = [
-            { text: "深度工作是一種在無干擾的專注狀態下進行的專業活動，這種活動能將你的認知能力推向極限。", book: "《深度工作力》", author: "Cal Newport", weight: 1 },
-            { text: "能夠承受無聊的人，才擁有專注的能力。", book: "《深度工作力》", author: "Cal Newport", weight: 1 },
-            { text: "無論之前的人生發生過什麼，都對今後的人生如何渡過沒有影響。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
-            { text: "所有煩惱，都是人際關係的煩惱。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
-            { text: "自由的代價就是被人討厭。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
-            { text: "如果你不能用自己的話解釋一件事，你就不理解它。", book: "《卡片盒筆記法》", author: "Sönke Ahrens", weight: 1 },
-            { text: "創新不是憑空產生，而是既有想法的新組合。", book: "《卡片盒筆記法》", author: "Sönke Ahrens", weight: 1 },
-            { text: "我從來不強迫自己思考，我只是讓筆記自己對話。", book: "《卡片盒筆記法》", author: "Niklas Luhmann", weight: 1 },
-            { text: "習慣，就是自我改善的複利。", book: "《原子習慣》", author: "James Clear", weight: 1 },
-            { text: "改變習慣最有效的方法，是專注於你想成為什麼樣的人。", book: "《原子習慣》", author: "James Clear", weight: 1 },
-            { text: "精通習慣由重複開始，而非完美。", book: "《原子習慣》", author: "James Clear", weight: 1 },
-            { text: "不要中斷連續紀錄。", book: "《原子習慣》", author: "James Clear", weight: 1 }
+            { id: "deep-work-01", text: "深度工作是一種在無干擾的專注狀態下進行的專業活動，這種活動能將你的認知能力推向極限。", book: "《深度工作力》", author: "Cal Newport", weight: 1 },
+            { id: "deep-work-02", text: "能夠承受無聊的人，才擁有專注的能力。", book: "《深度工作力》", author: "Cal Newport", weight: 1 },
+            { id: "courage-01", text: "無論之前的人生發生過什麼，都對今後的人生如何渡過沒有影響。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
+            { id: "courage-02", text: "所有煩惱，都是人際關係的煩惱。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
+            { id: "courage-03", text: "自由的代價就是被人討厭。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
+            { id: "zettelkasten-01", text: "如果你不能用自己的話解釋一件事，你就不理解它。", book: "《卡片盒筆記法》", author: "Sönke Ahrens", weight: 1 },
+            { id: "zettelkasten-02", text: "創新不是憑空產生，而是既有想法的新組合。", book: "《卡片盒筆記法》", author: "Sönke Ahrens", weight: 1 },
+            { id: "zettelkasten-03", text: "我從來不強迫自己思考，我只是讓筆記自己對話。", book: "《卡片盒筆記法》", author: "Niklas Luhmann", weight: 1 },
+            { id: "atomic-habits-01", text: "習慣，就是自我改善的複利。", book: "《原子習慣》", author: "James Clear", weight: 1 },
+            { id: "atomic-habits-02", text: "改變習慣最有效的方法，是專注於你想成為什麼樣的人。", book: "《原子習慣》", author: "James Clear", weight: 1 },
+            { id: "atomic-habits-03", text: "精通習慣由重複開始，而非完美。", book: "《原子習慣》", author: "James Clear", weight: 1 },
+            { id: "atomic-habits-04", text: "不要中斷連續紀錄。", book: "《原子習慣》", author: "James Clear", weight: 1 }
         ];
         
         let currentIndex = 0;
         let isPlaying = true;
         let autoPlayInterval;
-        let likedQuotes = new Set(); // 記錄已喜歡的 quote index
         
         const AUTO_PLAY_DELAY = 8000; // 8 秒自動輪播
+        const STORAGE_KEY = 'quote-rousal-likes';
+        const LIKE_BONUS = 2;
+        const DEFAULT_WEIGHT = 1;
+        
+        // 載入用戶喜好（從 localStorage）
+        function loadUserLikes() {
+            try {
+                const stored = localStorage.getItem(STORAGE_KEY);
+                if (stored) {
+                    const likes = JSON.parse(stored);
+                    // 應用儲存的權重到 quotes
+                    quotes.forEach(quote => {
+                        if (likes[quote.id]) {
+                            quote.weight = likes[quote.id];
+                        }
+                    });
+                }
+            } catch (e) {
+                console.log('無法載入喜好:', e);
+            }
+        }
+        
+        // 儲存用戶喜好（到 localStorage）
+        function saveUserLikes() {
+            try {
+                const likes = {};
+                quotes.forEach(quote => {
+                    likes[quote.id] = quote.weight;
+                });
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(likes));
+            } catch (e) {
+                console.log('無法儲存喜好:', e);
+            }
+        }
         
         // 加權隨機選擇
         function weightedRandomIndex() {
@@ -332,7 +364,7 @@
             
             // 重新觸發動畫
             wrapper.style.animation = 'none';
-            wrapper.offsetHeight; // 強制 reflow
+            wrapper.offsetHeight;
             wrapper.style.animation = 'fadeIn 0.8s ease';
             
             document.getElementById('quoteText').textContent = quote.text;
@@ -356,24 +388,28 @@
         // 喜歡當前 Quote
         function likeCurrentQuote() {
             const btn = document.getElementById('flowerBtn');
+            const quote = quotes[currentIndex];
             
-            if (likedQuotes.has(currentIndex)) {
+            if (quote.weight > DEFAULT_WEIGHT) {
                 // 取消喜歡
-                likedQuotes.delete(currentIndex);
-                quotes[currentIndex].weight = Math.max(1, quotes[currentIndex].weight - 2);
+                quote.weight = DEFAULT_WEIGHT;
                 btn.classList.remove('liked');
             } else {
                 // 喜歡
-                likedQuotes.add(currentIndex);
-                quotes[currentIndex].weight += 2; // 增加權重，下次出現機率更高
+                quote.weight += LIKE_BONUS;
                 btn.classList.add('liked');
             }
+            
+            // 儲存到 localStorage
+            saveUserLikes();
         }
         
         // 更新花按鈕狀態
         function updateFlowerButton() {
             const btn = document.getElementById('flowerBtn');
-            if (likedQuotes.has(currentIndex)) {
+            const quote = quotes[currentIndex];
+            
+            if (quote.weight > DEFAULT_WEIGHT) {
                 btn.classList.add('liked');
             } else {
                 btn.classList.remove('liked');
@@ -410,7 +446,6 @@
         
         // 點擊畫面暫停/播放
         document.getElementById('container').addEventListener('click', function(e) {
-            // 避免點擊控制區時也觸發
             if (e.target.closest('.controls')) return;
             togglePlay();
         });
@@ -429,7 +464,6 @@
             } else if (e.code === 'ArrowRight') {
                 nextQuote();
             } else if (e.code === 'ArrowLeft') {
-                // 上一則（簡單循環）
                 currentIndex = (currentIndex - 1 + quotes.length) % quotes.length;
                 displayQuote(currentIndex);
             } else if (e.code === 'KeyL') {
@@ -437,7 +471,8 @@
             }
         });
         
-        // 初始化
+        // 初始化：載入喜好並顯示第一則
+        loadUserLikes();
         displayQuote(0);
         startAutoPlay();
     </script>

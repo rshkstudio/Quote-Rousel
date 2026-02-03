@@ -2,6 +2,10 @@
 README.md
 CONTEXT.md
 
+# User data (weights are stored in browser localStorage)
+# user-likes.json is optional template, not required for deployment
+user-likes.json
+
 # macOS
 .DS_Store
 
