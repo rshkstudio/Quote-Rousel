@@ -1,155 +1,534 @@
 {
-  "manifest_version": "1.0",
+  "manifest_version": "1.1",
   "generated_at": "2026-02-03",
   "source": "Book-Summaries Project",
   "total_quotes": 65,
+  "max_display": 100,
+  "settings": {
+    "auto_play_delay": 8000,
+    "default_weight": 1,
+    "like_bonus": 2
+  },
   "quotes": [
     {
-      "id": "deep-work-01",
+      "id": "deep-work-001",
       "text": "深度工作是一種在無干擾的專注狀態下進行的專業活動，這種活動能將你的認知能力推向極限。",
-      "book": "《深度工作力》",
-      "author": "Cal Newport",
-      "tags": ["#DeepWork", "#Focus"]
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "定義深度工作的核心概念",
+      "weight": 1
     },
     {
-      "id": "deep-work-02",
+      "id": "deep-work-002",
+      "text": "在這個經濟中，有兩種核心能力可以讓你取得卓越成就：快速掌握困難事物的能力，以及在品質和速度上都達到精英級產出的能力。",
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "說明深度工作的經濟價值",
+      "weight": 1
+    },
+    {
+      "id": "deep-work-003",
+      "text": "不要等到你有靈感或心情對了才開始深度工作。相反，要將它排進你的日程，像對待重要會議一樣堅持執行。",
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "強調深度工作的紀律性",
+      "weight": 1
+    },
+    {
+      "id": "deep-work-004",
+      "text": "偉大的創意頭腦如思想家、作家，會像專業運動員一樣管理他們的精力——他們會建立儀式，將工作推向極限，然後在適當時候停下來。",
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "將深度工作比擬為運動訓練",
+      "weight": 1
+    },
+    {
+      "id": "deep-work-005",
       "text": "能夠承受無聊的人，才擁有專注的能力。",
-      "book": "《深度工作力》",
-      "author": "Cal Newport",
-      "tags": ["#Boredom", "#Focus"]
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "說明無聊與專注力的關係",
+      "weight": 1
     },
     {
-      "id": "deep-work-03",
+      "id": "deep-work-006",
+      "text": "一旦你習慣了隨時隨地都有一點點娛樂，你的大腦就會重新連結，讓你無法承受無聊，因而無法專注。",
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "解釋持續分心的神經影響",
+      "weight": 1
+    },
+    {
+      "id": "deep-work-007",
       "text": "社交媒體不是壞東西，但它們也不是免費的——它們用你最寶貴的資源來支付：你的時間和注意力。",
-      "book": "《深度工作力》",
-      "author": "Cal Newport",
-      "tags": ["#SocialMedia", "#Attention"]
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "重新定義社交媒體的「成本」",
+      "weight": 1
     },
     {
-      "id": "courage-01",
+      "id": "deep-work-008",
+      "text": "如果你不用某個工具也能過得很好，那麼你使用它的事實就是最好的證據：你並不需要它。",
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "說明如何判斷工具的必要性",
+      "weight": 1
+    },
+    {
+      "id": "deep-work-009",
+      "text": "如果你不為你的時間設立界限，別人就會為你設立。",
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "強調主動管理時間的重要性",
+      "weight": 1
+    },
+    {
+      "id": "deep-work-010",
+      "text": "成為一個難以聯繫但非常有幫助的人，遠比成為一個隨時可聯繫但平庸的人更有價值。",
+      "book": "《深度工作力》 (Deep Work)",
+      "author": "Cal Newport (卡爾·紐波特)",
+      "context": "重新定義工作溝通的品質標準",
+      "weight": 1
+    },
+    {
+      "id": "courage-to-be-disliked-011",
       "text": "無論之前的人生發生過什麼，都對今後的人生如何渡過沒有影響。",
-      "book": "《被討厭的勇氣》",
+      "book": "被討厭的勇氣（The Courage to Be Disliked）",
       "author": "岸見一郎、古賀史健",
-      "tags": ["#Teleology", "#Present"]
+      "context": "否定原因論，強調當下的選擇",
+      "weight": 1
     },
     {
-      "id": "courage-02",
+      "id": "courage-to-be-disliked-012",
       "text": "所有煩惱，都是人際關係的煩惱。",
-      "book": "《被討厭的勇氣》",
+      "book": "被討厭的勇氣（The Courage to Be Disliked）",
       "author": "岸見一郎、古賀史健",
-      "tags": ["#Interpersonal", "#Adler"]
+      "context": "核心命題",
+      "weight": 1
     },
     {
-      "id": "courage-03",
+      "id": "courage-to-be-disliked-013",
+      "text": "你能做的，只有『選擇你認為最好的道路』。別人如何評價你的選擇，那是別人的課題，你根本無法左右。",
+      "book": "被討厭的勇氣（The Courage to Be Disliked）",
+      "author": "岸見一郎、古賀史健",
+      "context": "第三夜對話",
+      "weight": 1
+    },
+    {
+      "id": "courage-to-be-disliked-014",
       "text": "自由的代價就是被人討厭。",
-      "book": "《被討厭的勇氣》",
+      "book": "被討厭的勇氣（The Courage to Be Disliked）",
       "author": "岸見一郎、古賀史健",
-      "tags": ["#Freedom", "#Courage"]
+      "context": "核心命題",
+      "weight": 1
     },
     {
-      "id": "zettelkasten-01",
+      "id": "courage-to-be-disliked-015",
+      "text": "『你不是為了滿足別人的期待而活著，別人也不是為了滿足你的期待而活著』。",
+      "book": "被討厭的勇氣（The Courage to Be Disliked）",
+      "author": "岸見一郎、古賀史健",
+      "context": "第四夜對話",
+      "weight": 1
+    },
+    {
+      "id": "courage-to-be-disliked-016",
+      "text": "人生就像跳舞，跳舞的意義就在於跳舞本身，不在於跳完後要到達某處。",
+      "book": "被討厭的勇氣（The Courage to Be Disliked）",
+      "author": "岸見一郎、古賀史健",
+      "context": "第五夜對話",
+      "weight": 1
+    },
+    {
+      "id": "courage-to-be-disliked-017",
+      "text": "『我對他人有用』，這就是幸福的本質。",
+      "book": "被討厭的勇氣（The Courage to Be Disliked）",
+      "author": "岸見一郎、古賀史健",
+      "context": "貢獻感",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-018",
+      "text": "好的解決方案往往出人意料地簡單，但發現它們的過程並不簡單。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "描述 Zettelkasten 的簡潔與深奧",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-019",
+      "text": "我們不應該在研究時才開始寫作，而應該在寫作時繼續研究。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "顛覆傳統「先研究後寫作」的線性思維",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-020",
       "text": "如果你不能用自己的話解釋一件事，你就不理解它。",
-      "book": "《卡片盒筆記法》",
-      "author": "Sönke Ahrens",
-      "tags": ["#Understanding", "#Learning"]
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "強調文獻筆記必須用自己的話重述",
+      "weight": 1
     },
     {
-      "id": "zettelkasten-02",
+      "id": "how-to-take-smart-notes-021",
       "text": "永久筆記應該像對陌生人說話一樣清晰，因為未來的你就是陌生人。",
-      "book": "《卡片盒筆記法》",
-      "author": "Sönke Ahrens",
-      "tags": ["#NoteTaking", "#FutureSelf"]
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "描述永久筆記的自包含性原則",
+      "weight": 1
     },
     {
-      "id": "zettelkasten-03",
+      "id": "how-to-take-smart-notes-022",
+      "text": "編號不是為了分類，而是為了建立永久的語境關係。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "闡述 Luhmann 編號系統的本質",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-023",
+      "text": "Luhmann 的卡片盒不是資料庫，而是對話伙伴。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "描述卡片盒的動態性質",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-024",
       "text": "創新不是憑空產生，而是既有想法的新組合。",
-      "book": "《卡片盒筆記法》",
-      "author": "Sönke Ahrens",
-      "tags": ["#Innovation", "#Creativity"]
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "解釋連結如何導致創新",
+      "weight": 1
     },
     {
-      "id": "zettelkasten-04",
+      "id": "how-to-take-smart-notes-025",
       "text": "我從來不強迫自己思考，我只是讓筆記自己對話。",
-      "book": "《卡片盒筆記法》",
-      "author": "Niklas Luhmann",
-      "tags": ["#Thinking", "#Zettelkasten"]
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "描述卡片盒的湧現特性",
+      "weight": 1
     },
     {
-      "id": "mindset-01",
+      "id": "how-to-take-smart-notes-026",
+      "text": "工具永遠是次要的，重要的是你與知識的關係。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "提醒不要過度關注工具而忽視內容",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-027",
+      "text": "簡單到極致就是複雜。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "描述 Zettelkasten 的簡潔設計哲學",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-028",
+      "text": "知識工作不是馬拉松，而是園藝——每天澆水，等待開花。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "強調耐心與持續的重要性",
+      "weight": 1
+    },
+    {
+      "id": "how-to-take-smart-notes-029",
+      "text": "Luhmann 不是因為聰明而成功，而是因為他比別人多寫了一萬張卡片。",
+      "book": "《卡片盒筆記法》 (How to Take Smart Notes)",
+      "author": "Sönke Ahrens (申克·阿倫斯)",
+      "context": "強調數量的重要性",
+      "weight": 1
+    },
+    {
+      "id": "mindset-030",
       "text": "成為一個有成長型思維的人，不是說你擁有它，而是說你為了它而努力。",
-      "book": "《心態致勝》",
+      "book": "心態致勝（Mindset: The New Psychology of Success）",
       "author": "Carol S. Dweck",
-      "tags": ["#GrowthMindset", "#Effort"]
+      "context": "第1章",
+      "weight": 1
     },
     {
-      "id": "mindset-02",
+      "id": "mindset-031",
       "text": "大腦的可塑性意味著我們的能力比我們想像的更有延展性。",
-      "book": "《心態致勝》",
+      "book": "心態致勝（Mindset: The New Psychology of Success）",
       "author": "Carol S. Dweck",
-      "tags": ["#Neuroplasticity", "#Potential"]
+      "context": "第2章",
+      "weight": 1
     },
     {
-      "id": "peak-01",
+      "id": "mindset-032",
+      "text": "沒有人會因為被稱讚聰明而持續努力，但人會因為享受學習而持續成長。",
+      "book": "心態致勝（Mindset: The New Psychology of Success）",
+      "author": "Carol S. Dweck",
+      "context": "第3章",
+      "weight": 1
+    },
+    {
+      "id": "mindset-033",
+      "text": "冠軍不是因為他們總是贏，而是因為他們總是學習。",
+      "book": "心態致勝（Mindset: The New Psychology of Success）",
+      "author": "Carol S. Dweck",
+      "context": "第4章",
+      "weight": 1
+    },
+    {
+      "id": "mindset-034",
+      "text": "最好的領導者不是尋找天才，而是創造天才。",
+      "book": "心態致勝（Mindset: The New Psychology of Success）",
+      "author": "Carol S. Dweck",
+      "context": "第5章",
+      "weight": 1
+    },
+    {
+      "id": "mindset-035",
+      "text": "健康的关系不是没有问题的关系，而是双方都愿意为了成长而努力的关系。",
+      "book": "心態致勝（Mindset: The New Psychology of Success）",
+      "author": "Carol S. Dweck",
+      "context": "第6章",
+      "weight": 1
+    },
+    {
+      "id": "mindset-036",
+      "text": "改變不是關於變成另一個人，而是關於看見並釋放你已經擁有的潛力。",
+      "book": "心態致勝（Mindset: The New Psychology of Success）",
+      "author": "Carol S. Dweck",
+      "context": "第7章",
+      "weight": 1
+    },
+    {
+      "id": "peak-037",
       "text": "天才並非天生，而是刻意練習的結果。",
-      "book": "《刻意練習》",
-      "author": "Anders Ericsson",
-      "tags": ["#DeliberatePractice", "#Expertise"]
+      "book": "刻意練習（Peak: Secrets from the New Science of Expertise）",
+      "author": "Anders Ericsson、Robert Pool",
+      "context": "核心命題",
+      "weight": 1
     },
     {
-      "id": "peak-02",
+      "id": "peak-038",
+      "text": "單純的重複並不會讓你變得更好，只有有目的的練習才會。",
+      "book": "刻意練習（Peak: Secrets from the New Science of Expertise）",
+      "author": "Anders Ericsson、Robert Pool",
+      "context": "第二章",
+      "weight": 1
+    },
+    {
+      "id": "peak-039",
+      "text": "專家看到的，新手看不到。這就是心理表徵的力量。",
+      "book": "刻意練習（Peak: Secrets from the New Science of Expertise）",
+      "author": "Anders Ericsson、Robert Pool",
+      "context": "第三章",
+      "weight": 1
+    },
+    {
+      "id": "peak-040",
       "text": "如果你不感到吃力，你就沒有在進步。",
-      "book": "《刻意練習》",
-      "author": "Anders Ericsson",
-      "tags": ["#Growth", "#ComfortZone"]
+      "book": "刻意練習（Peak: Secrets from the New Science of Expertise）",
+      "author": "Anders Ericsson、Robert Pool",
+      "context": "第四章",
+      "weight": 1
     },
     {
-      "id": "atomic-habits-01",
+      "id": "peak-041",
+      "text": "沒有人天生就是專家，但任何人都可以透過正確的方法成為專家。",
+      "book": "刻意練習（Peak: Secrets from the New Science of Expertise）",
+      "author": "Anders Ericsson、Robert Pool",
+      "context": "第五章",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-042",
       "text": "習慣，就是自我改善的複利。",
-      "book": "《原子習慣》",
-      "author": "James Clear",
-      "tags": ["#Habits", "#Compound"]
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "解釋微小改變如何隨時間產生巨大影響",
+      "weight": 1
     },
     {
-      "id": "atomic-habits-02",
+      "id": "atomic-habits-043",
       "text": "改變習慣最有效的方法，是專注於你想成為什麼樣的人，而不是你想達成什麼成果。",
-      "book": "《原子習慣》",
-      "author": "James Clear",
-      "tags": ["#Identity", "#Habits"]
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "探討行為改變的層次與身分認同的重要性",
+      "weight": 1
     },
     {
-      "id": "atomic-habits-03",
+      "id": "atomic-habits-044",
+      "text": "做完 [目前的習慣] 後，我會執行 [新的習慣]。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "介紹習慣堆疊的標準公式",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-045",
+      "text": "環境是形塑人類行為的隱形之手。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "強調環境提示對習慣的影響",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-046",
+      "text": "預期獎賞的過程（而非獲得獎賞）才是採取行動的動力。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "解釋多巴胺峰值與渴望的關係",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-047",
+      "text": "我們要讓習慣顯得有吸引力，因為機會越有吸引力，越容易形成習慣。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "第二法則的核心原則",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-048",
       "text": "精通習慣由重複開始，而非完美。",
-      "book": "《原子習慣》",
-      "author": "James Clear",
-      "tags": ["#Consistency", "#Progress"]
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "強調行動數量比質量更重要",
+      "weight": 1
     },
     {
-      "id": "atomic-habits-04",
+      "id": "atomic-habits-049",
+      "text": "當你開始培養一個習慣時，它所用時間不應超過兩分鐘。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "解釋兩分鐘法則",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-050",
+      "text": "帶來獎賞的行為會被重複、帶來懲罰的行為會被避免。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "行為強化的基本原則",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-051",
       "text": "不要中斷連續紀錄（Don't break the chain）。",
-      "book": "《原子習慣》",
-      "author": "James Clear",
-      "tags": ["#Consistency", "#Streak"]
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "習慣追蹤的核心心法",
+      "weight": 1
     },
     {
-      "id": "thinking-01",
+      "id": "atomic-habits-052",
+      "text": "成功最大的威脅不是失敗，而是無聊。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "解釋為何許多人在習慣養成後期會放棄",
+      "weight": 1
+    },
+    {
+      "id": "atomic-habits-053",
+      "text": "金髮女孩規則指出，人在處理其能力可及的事務時積極性最高。",
+      "book": "《原子習慣》 (Atomic Habits)",
+      "author": "James Clear (詹姆斯·克利爾)",
+      "context": "探討如何維持動力與心流",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-054",
       "text": "系統一從不會疑惑，系統二有可能被說服，但很難被強迫。",
-      "book": "《快思慢想》",
-      "author": "Daniel Kahneman",
-      "tags": ["#System1", "#System2"]
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "描述兩個系統的特性差異",
+      "weight": 1
     },
     {
-      "id": "thinking-02",
+      "id": "thinking-fast-and-slow-055",
       "text": "我們對自己的無知往往是看不見的。",
-      "book": "《快思慢想》",
-      "author": "Daniel Kahneman",
-      "tags": ["#Awareness", "#Bias"]
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "討論過度自信與認知盲點",
+      "weight": 1
     },
     {
-      "id": "thinking-03",
+      "id": "thinking-fast-and-slow-056",
+      "text": "重複曝光效應：重複出現會增加喜愛度，即使我們不記得見過它。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "解釋熟悉感如何影響偏好",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-057",
+      "text": "認知輕鬆同時是感覺、熟悉感、真實感與感覺良好的來源。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "闡述認知流暢度的多重效應",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-058",
+      "text": "錨定效應是任何數字都會成為錨點，即使是隨機產生的數字。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "展示錨定效應的強大與普遍性",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-059",
+      "text": "調整通常是不足的。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "描述人們從錨點移開的幅度有限",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-060",
+      "text": "人們高估容易想起的事件，低估不易想像的事件。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "解釋可得性捷思法的核心機制",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-061",
+      "text": "媒體不只是塑造興趣，也塑造可得性。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "討論媒體對公眾風險認知的影響",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-062",
       "text": "失去東西的痛苦約是得到同樣東西快樂的兩倍。",
-      "book": "《快思慢想》",
-      "author": "Daniel Kahneman",
-      "tags": ["#LossAversion", "#Behavior"]
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "定義損失規避的數學關係",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-063",
+      "text": "人們對自己的東西有情感依戀，這種依戀是立即發生的。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "描述稟賦效應的快速形成",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-064",
+      "text": "我們對過去的評價由峰值的強度與結束時的感覺決定。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "定義峰終定律",
+      "weight": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-065",
+      "text": "我們有兩個自我：經驗的自我與記憶的自我，它們對快樂有不同的利益。",
+      "book": "《快思慢想》 (Thinking, Fast and Slow)",
+      "author": "Daniel Kahneman (丹尼爾·康納曼)",
+      "context": "區分兩種自我概念",
+      "weight": 1
     }
   ]
 }

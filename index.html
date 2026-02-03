@@ -29,7 +29,6 @@
             align-items: center;
         }
         
-        /* 頂部細線 */
         .top-line {
             position: fixed;
             top: 0;
@@ -40,7 +39,24 @@
             z-index: 100;
         }
         
-        /* 主容器 */
+        .settings-btn {
+            position: fixed;
+            top: 20px;
+            left: 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: #333;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.05em;
+            z-index: 50;
+        }
+        
+        .settings-btn:hover {
+            color: #c9372c;
+        }
+        
         .container {
             width: 100%;
             height: 100%;
@@ -52,7 +68,6 @@
             position: relative;
         }
         
-        /* Quote 區域 */
         .quote-wrapper {
             text-align: center;
             max-width: 900px;
@@ -95,7 +110,6 @@
             color: #888;
         }
         
-        /* 底部控制區 */
         .controls {
             position: fixed;
             bottom: 60px;
@@ -108,7 +122,6 @@
             z-index: 10;
         }
         
-        /* 花按鈕 - 評分 */
         .flower-btn {
             width: 80px;
             height: 80px;
@@ -120,7 +133,6 @@
             justify-content: center;
             align-items: center;
             transition: all 0.3s ease;
-            position: relative;
         }
         
         .flower-btn:hover {
@@ -135,11 +147,6 @@
         
         .flower-icon {
             font-size: 36px;
-            transition: transform 0.3s ease;
-        }
-        
-        .flower-btn:active .flower-icon {
-            transform: scale(1.3);
         }
         
         .flower-btn.liked .flower-icon {
@@ -152,12 +159,10 @@
             100% { transform: scale(1); }
         }
         
-        /* 進度指示 */
         .progress {
             font-family: 'JetBrains Mono', monospace;
             font-size: 12px;
             color: #555;
-            letter-spacing: 0.1em;
         }
         
         .progress-bar {
@@ -165,7 +170,6 @@
             height: 2px;
             background: #333;
             margin: 10px auto 0;
-            overflow: hidden;
         }
         
         .progress-fill {
@@ -174,7 +178,6 @@
             transition: width 0.5s ease;
         }
         
-        /* 播放/暫停 */
         .play-pause {
             width: 50px;
             height: 50px;
@@ -184,7 +187,6 @@
             cursor: pointer;
             font-family: 'JetBrains Mono', monospace;
             font-size: 12px;
-            transition: all 0.2s;
         }
         
         .play-pause:hover {
@@ -192,74 +194,111 @@
             color: #999;
         }
         
-        /* 動畫 */
+        /* Settings Panel */
+        .settings-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 32px;
+            z-index: 200;
+            display: none;
+            min-width: 300px;
+        }
+        
+        .settings-panel.show {
+            display: block;
+        }
+        
+        .settings-panel h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: #c9372c;
+            margin-bottom: 24px;
+            letter-spacing: 0.1em;
+        }
+        
+        .settings-panel button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #333;
+            background: transparent;
+            color: #888;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            cursor: pointer;
+        }
+        
+        .settings-panel button:hover {
+            border-color: #c9372c;
+            color: #c9372c;
+        }
+        
+        .settings-panel .close-btn {
+            margin-top: 12px;
+            border-color: #444;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 150;
+            display: none;
+        }
+        
+        .overlay.show {
+            display: block;
+        }
+        
+        .stats {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* 手機版 */
         @media (max-width: 768px) {
-            .container {
-                padding: 40px 24px;
-            }
-            
-            .quote-mark {
-                font-size: 50px;
-                margin-bottom: 20px;
-            }
-            
-            .quote-text {
-                font-size: 24px;
-                margin-bottom: 30px;
-                line-height: 1.7;
-            }
-            
-            .quote-book {
-                font-size: 11px;
-            }
-            
-            .quote-author {
-                font-size: 14px;
-            }
-            
-            .controls {
-                bottom: 40px;
-                gap: 40px;
-            }
-            
-            .flower-btn {
-                width: 64px;
-                height: 64px;
-            }
-            
-            .flower-icon {
-                font-size: 28px;
-            }
-            
-            .play-pause {
-                width: 44px;
-                height: 44px;
-                font-size: 10px;
-            }
-        }
-        
-        /* 提示文字 */
-        .hint {
-            position: fixed;
-            top: 20px;
-            right: 24px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
-            color: #333;
-            letter-spacing: 0.05em;
+            .container { padding: 40px 24px; }
+            .quote-mark { font-size: 50px; margin-bottom: 20px; }
+            .quote-text { font-size: 24px; margin-bottom: 30px; }
+            .quote-book { font-size: 11px; }
+            .quote-author { font-size: 14px; }
+            .controls { bottom: 40px; gap: 40px; }
+            .flower-btn { width: 64px; height: 64px; }
+            .flower-icon { font-size: 28px; }
+            .play-pause { width: 44px; height: 44px; font-size: 10px; }
         }
     </style>
 </head>
 <body>
     <div class="top-line"></div>
     
-    <div class="hint">點擊畫面暫停 · 雙擊切換下一則</div>
+    <button class="settings-btn" onclick="toggleSettings()">設置</button>
+    
+    <div class="overlay" id="overlay" onclick="toggleSettings()"></div>
+    
+    <div class="settings-panel" id="settingsPanel">
+        <h3>設置</h3>
+        <div class="stats" id="statsText">總共: 0 | 已喜歡: 0</div>
+        <button onclick="downloadBackup()">下載備份 (JSON)</button>
+        <button onclick="clearLocalStorage()">清除所有喜好</button>
+        <button onclick="location.reload()">重新載入頁面</button>
+        
+        <button class="close-btn" onclick="toggleSettings()">關閉</button>
+    </div>
     
     <div class="container" id="container">
         <div class="quote-wrapper" id="quoteWrapper">
@@ -274,83 +313,130 @@
     
     <div class="controls">
         <button class="play-pause" id="playPauseBtn" onclick="togglePlay()">暫停</button>
-        
         <button class="flower-btn" id="flowerBtn" onclick="likeCurrentQuote()">
             <span class="flower-icon">✿</span>
         </button>
         
         <div class="progress">
-            <span id="progressText">1 / 12</span>
+            <span id="progressText">1 / 100</span>
             <div class="progress-bar">
-                <div class="progress-fill" id="progressFill" style="width: 8%"></div>
+                <div class="progress-fill" id="progressFill" style="width: 1%"></div>
             </div>
         </div>
     </div>
     
     <script>
-        // Quotes 資料（加 ID 供識別）
-        const quotes = [
-            { id: "deep-work-01", text: "深度工作是一種在無干擾的專注狀態下進行的專業活動，這種活動能將你的認知能力推向極限。", book: "《深度工作力》", author: "Cal Newport", weight: 1 },
-            { id: "deep-work-02", text: "能夠承受無聊的人，才擁有專注的能力。", book: "《深度工作力》", author: "Cal Newport", weight: 1 },
-            { id: "courage-01", text: "無論之前的人生發生過什麼，都對今後的人生如何渡過沒有影響。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
-            { id: "courage-02", text: "所有煩惱，都是人際關係的煩惱。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
-            { id: "courage-03", text: "自由的代價就是被人討厭。", book: "《被討厭的勇氣》", author: "岸見一郎", weight: 1 },
-            { id: "zettelkasten-01", text: "如果你不能用自己的話解釋一件事，你就不理解它。", book: "《卡片盒筆記法》", author: "Sönke Ahrens", weight: 1 },
-            { id: "zettelkasten-02", text: "創新不是憑空產生，而是既有想法的新組合。", book: "《卡片盒筆記法》", author: "Sönke Ahrens", weight: 1 },
-            { id: "zettelkasten-03", text: "我從來不強迫自己思考，我只是讓筆記自己對話。", book: "《卡片盒筆記法》", author: "Niklas Luhmann", weight: 1 },
-            { id: "atomic-habits-01", text: "習慣，就是自我改善的複利。", book: "《原子習慣》", author: "James Clear", weight: 1 },
-            { id: "atomic-habits-02", text: "改變習慣最有效的方法，是專注於你想成為什麼樣的人。", book: "《原子習慣》", author: "James Clear", weight: 1 },
-            { id: "atomic-habits-03", text: "精通習慣由重複開始，而非完美。", book: "《原子習慣》", author: "James Clear", weight: 1 },
-            { id: "atomic-habits-04", text: "不要中斷連續紀錄。", book: "《原子習慣》", author: "James Clear", weight: 1 }
-        ];
+        const MAX_QUOTES = 100;
+        const STORAGE_KEY = 'quote-rousal-likes-v2';
+        const AUTO_PLAY_DELAY = 8000;
+        const LIKE_BONUS = 2;
+        const DEFAULT_WEIGHT = 1;
         
+        let allQuotes = [];        // 從 manifest 載入的全部 quotes
+        let displayQuotes = [];    // 實際顯示的 100 條（經過 Roll）
         let currentIndex = 0;
         let isPlaying = true;
         let autoPlayInterval;
         
-        const AUTO_PLAY_DELAY = 8000; // 8 秒自動輪播
-        const STORAGE_KEY = 'quote-rousal-likes';
-        const LIKE_BONUS = 2;
-        const DEFAULT_WEIGHT = 1;
+        // 從 manifest 載入 quotes
+        async function loadQuotes() {
+            try {
+                const response = await fetch('quotes-manifest.json');
+                const data = await response.json();
+                allQuotes = data.quotes || [];
+                
+                // Roll: 隨機選擇最多 100 條，然後打亂順序
+                rollQuotes();
+                
+                // 載入用戶喜好
+                loadUserLikes();
+                
+                // 顯示第一則
+                displayQuote(0);
+                startAutoPlay();
+                updateStats();
+            } catch (e) {
+                console.error('載入失敗:', e);
+                document.getElementById('quoteText').textContent = '載入失敗，請檢查 quotes-manifest.json';
+            }
+        }
         
-        // 載入用戶喜好（從 localStorage）
+        // Roll: 隨機選擇並打亂
+        function rollQuotes() {
+            // 如果總數超過 100，隨機選擇 100 條
+            if (allQuotes.length > MAX_QUOTES) {
+                // Fisher-Yates 洗牌後取前 100
+                const shuffled = [...allQuotes].sort(() => Math.random() - 0.5);
+                displayQuotes = shuffled.slice(0, MAX_QUOTES);
+            } else {
+                // 少於 100 條，全部打亂
+                displayQuotes = [...allQuotes].sort(() => Math.random() - 0.5);
+            }
+            
+            console.log(`Roll 完成: 從 ${allQuotes.length} 條中選出 ${displayQuotes.length} 條`);
+        }
+        
+        // 載入用戶喜好（處理 manifest 更新的兼容性）
         function loadUserLikes() {
             try {
                 const stored = localStorage.getItem(STORAGE_KEY);
                 if (stored) {
                     const likes = JSON.parse(stored);
-                    // 應用儲存的權重到 quotes
-                    quotes.forEach(quote => {
+                    
+                    // 檢查哪些 ID 仍然存在於當前 displayQuotes 中
+                    let validCount = 0;
+                    let invalidCount = 0;
+                    
+                    displayQuotes.forEach(quote => {
                         if (likes[quote.id]) {
                             quote.weight = likes[quote.id];
+                            validCount++;
                         }
                     });
+                    
+                    // 清理無效的 ID（不存在於當前 quotes 中的喜好）
+                    const validIds = new Set(displayQuotes.map(q => q.id));
+                    const cleanedLikes = {};
+                    Object.keys(likes).forEach(id => {
+                        if (validIds.has(id)) {
+                            cleanedLikes[id] = likes[id];
+                        } else {
+                            invalidCount++;
+                        }
+                    });
+                    
+                    // 儲存清理後的資料
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanedLikes));
+                    
+                    console.log(`載入喜好: ${validCount} 條有效, 清理了 ${invalidCount} 條無效`);
                 }
             } catch (e) {
-                console.log('無法載入喜好:', e);
+                console.log('載入喜好失敗:', e);
             }
         }
         
-        // 儲存用戶喜好（到 localStorage）
+        // 儲存用戶喜好
         function saveUserLikes() {
             try {
                 const likes = {};
-                quotes.forEach(quote => {
-                    likes[quote.id] = quote.weight;
+                displayQuotes.forEach(quote => {
+                    if (quote.weight > DEFAULT_WEIGHT) {
+                        likes[quote.id] = quote.weight;
+                    }
                 });
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(likes));
             } catch (e) {
-                console.log('無法儲存喜好:', e);
+                console.log('儲存喜好失敗:', e);
             }
         }
         
         // 加權隨機選擇
         function weightedRandomIndex() {
-            const totalWeight = quotes.reduce((sum, q) => sum + q.weight, 0);
+            const totalWeight = displayQuotes.reduce((sum, q) => sum + (q.weight || DEFAULT_WEIGHT), 0);
             let random = Math.random() * totalWeight;
             
-            for (let i = 0; i < quotes.length; i++) {
-                random -= quotes[i].weight;
+            for (let i = 0; i < displayQuotes.length; i++) {
+                random -= (displayQuotes[i].weight || DEFAULT_WEIGHT);
                 if (random <= 0) return i;
             }
             return 0;
@@ -359,10 +445,9 @@
         // 顯示 Quote
         function displayQuote(index) {
             currentIndex = index;
-            const quote = quotes[index];
+            const quote = displayQuotes[index];
             const wrapper = document.getElementById('quoteWrapper');
             
-            // 重新觸發動畫
             wrapper.style.animation = 'none';
             wrapper.offsetHeight;
             wrapper.style.animation = 'fadeIn 0.8s ease';
@@ -371,43 +456,39 @@
             document.getElementById('quoteBook').textContent = quote.book;
             document.getElementById('quoteAuthor').textContent = quote.author;
             
-            // 更新進度
-            document.getElementById('progressText').textContent = `${index + 1} / ${quotes.length}`;
-            document.getElementById('progressFill').style.width = `${((index + 1) / quotes.length) * 100}%`;
+            document.getElementById('progressText').textContent = `${index + 1} / ${displayQuotes.length}`;
+            document.getElementById('progressFill').style.width = `${((index + 1) / displayQuotes.length) * 100}%`;
             
-            // 更新花按鈕狀態
             updateFlowerButton();
         }
         
-        // 下一則（加權隨機）
+        // 下一則
         function nextQuote() {
             const nextIndex = weightedRandomIndex();
             displayQuote(nextIndex);
         }
         
-        // 喜歡當前 Quote
+        // 喜歡
         function likeCurrentQuote() {
             const btn = document.getElementById('flowerBtn');
-            const quote = quotes[currentIndex];
+            const quote = displayQuotes[currentIndex];
             
-            if (quote.weight > DEFAULT_WEIGHT) {
-                // 取消喜歡
+            if (!quote.weight || quote.weight <= DEFAULT_WEIGHT) {
+                quote.weight = DEFAULT_WEIGHT + LIKE_BONUS;
+                btn.classList.add('liked');
+            } else {
                 quote.weight = DEFAULT_WEIGHT;
                 btn.classList.remove('liked');
-            } else {
-                // 喜歡
-                quote.weight += LIKE_BONUS;
-                btn.classList.add('liked');
             }
             
-            // 儲存到 localStorage
             saveUserLikes();
+            updateStats();
         }
         
-        // 更新花按鈕狀態
+        // 更新花按鈕
         function updateFlowerButton() {
             const btn = document.getElementById('flowerBtn');
-            const quote = quotes[currentIndex];
+            const quote = displayQuotes[currentIndex];
             
             if (quote.weight > DEFAULT_WEIGHT) {
                 btn.classList.add('liked');
@@ -416,7 +497,7 @@
             }
         }
         
-        // 播放/暫停
+        // 播放控制
         function togglePlay() {
             isPlaying = !isPlaying;
             const btn = document.getElementById('playPauseBtn');
@@ -430,13 +511,11 @@
             }
         }
         
-        // 開始自動輪播
         function startAutoPlay() {
             stopAutoPlay();
             autoPlayInterval = setInterval(nextQuote, AUTO_PLAY_DELAY);
         }
         
-        // 停止自動輪播
         function stopAutoPlay() {
             if (autoPlayInterval) {
                 clearInterval(autoPlayInterval);
@@ -444,19 +523,75 @@
             }
         }
         
-        // 點擊畫面暫停/播放
+        // 設置面板
+        function toggleSettings() {
+            document.getElementById('settingsPanel').classList.toggle('show');
+            document.getElementById('overlay').classList.toggle('show');
+            updateStats();
+        }
+        
+        // 更新統計
+        function updateStats() {
+            const likedCount = displayQuotes.filter(q => q.weight > DEFAULT_WEIGHT).length;
+            document.getElementById('statsText').textContent = 
+                `總共: ${displayQuotes.length} | 已喜歡: ${likedCount}`;
+        }
+        
+        // 下載備份
+        function downloadBackup() {
+            try {
+                const stored = localStorage.getItem(STORAGE_KEY);
+                const data = stored ? JSON.parse(stored) : {};
+                
+                const backup = {
+                    version: '2.0',
+                    exported_at: new Date().toISOString(),
+                    total_quotes: displayQuotes.length,
+                    liked_quotes: Object.keys(data).length,
+                    data: data
+                };
+                
+                const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `quote-rousal-backup-${new Date().toISOString().split('T')[0]}.json`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                alert('備份已下載');
+            } catch (e) {
+                alert('下載失敗: ' + e.message);
+            }
+        }
+        
+        // 清除 localStorage
+        function clearLocalStorage() {
+            if (confirm('確定要清除所有喜好嗎？此操作無法復原。')) {
+                localStorage.removeItem(STORAGE_KEY);
+                
+                // 重置所有權重
+                displayQuotes.forEach(q => q.weight = DEFAULT_WEIGHT);
+                updateFlowerButton();
+                updateStats();
+                
+                alert('已清除所有喜好');
+            }
+        }
+        
+        // 事件監聽
         document.getElementById('container').addEventListener('click', function(e) {
-            if (e.target.closest('.controls')) return;
+            if (e.target.closest('.controls') || e.target.closest('.settings-panel')) return;
             togglePlay();
         });
         
-        // 雙擊切換下一則
         document.getElementById('container').addEventListener('dblclick', function(e) {
-            if (e.target.closest('.controls')) return;
+            if (e.target.closest('.controls') || e.target.closest('.settings-panel')) return;
             nextQuote();
         });
         
-        // 鍵盤控制
         document.addEventListener('keydown', function(e) {
             if (e.code === 'Space') {
                 e.preventDefault();
@@ -464,17 +599,18 @@
             } else if (e.code === 'ArrowRight') {
                 nextQuote();
             } else if (e.code === 'ArrowLeft') {
-                currentIndex = (currentIndex - 1 + quotes.length) % quotes.length;
+                currentIndex = (currentIndex - 1 + displayQuotes.length) % displayQuotes.length;
                 displayQuote(currentIndex);
             } else if (e.code === 'KeyL') {
                 likeCurrentQuote();
+            } else if (e.code === 'Escape') {
+                document.getElementById('settingsPanel').classList.remove('show');
+                document.getElementById('overlay').classList.remove('show');
             }
         });
         
-        // 初始化：載入喜好並顯示第一則
-        loadUserLikes();
-        displayQuote(0);
-        startAutoPlay();
+        // 初始化
+        loadQuotes();
     </script>
 </body>
 </html>
