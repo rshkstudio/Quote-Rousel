@@ -1,0 +1,16 @@
+# Ignore local documentation
+README.md
+CONTEXT.md
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
